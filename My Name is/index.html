@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  <!--ham -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>My Name is</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFT GAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-----------audio---------->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style type="text/css">
+
+.preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      transition: opacity .1s;
+      transition-delay: 3s;
+    }
+    .preloader.is-loaded {
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0);
+      opacity: 0;
+    }
+
+    .pl-line {
+      position: absolute;
+      width: 1px;
+      height: 150%;
+      background: black;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(20deg);
+      transition: opacity 1s ease-out;
+    }
+    .is-loaded .pl-line {
+      opacity: 0;
+    }
+    .pl-line > div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      animation: pulse 2s infinite;
+      will-change: transform;
+      animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    .pl-l, .pl-r {
+      position: absolute;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      will-change: transform;
+      background: black;
+    }
+
+    .pl-l {
+      left: -20%;
+      transform: skew(-20deg);
+    }
+    .is-loaded .pl-l {
+      transform: translateX(-100%) skew(-20deg);
+    }
+
+    .pl-r {
+      right: -20%;
+      transform: skew(-20deg);
+    }
+    .is-loaded .pl-r {
+      transform: translateX(100%) skew(-20deg);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+  </style>
+  <link rel="stylesheet" href="../basestyle.css">
+
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div class="preloader" style="z-index:9999999999999999;">
+    <div class="pl-l"></div>
+    <div class="pl-r"></div>
+    <div class="pl-line">
+      <div></div>
+    </div>
+  </div>
+  <!-- /PRELOADER -->
+  <div class="flex-contianer" >
+    <div class="aud">
+      <audio src="../eng.mp3" id="aud" loop="TRUE"></audio>
+      <button id="butto" class="butto">
+        <i class="fa fa-volume-up " aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="eee" style="display: none;" >
+
+      <button class="map-point-sm en eng button" id="en" data-show=".english">
+        <div class="content">
+          <div  class="ed">
+            <p>English</p>
+          </div>
+        </div>
+      </button>
+      <button class="map-point-sm hi button" id="hi" data-show=".hindi">
+        <div class="content">
+          <div>
+            <p  class="hd">Hindi</p>
+          </div>
+        </div>
+      </button>
+
+    </div><!-- end inner basic -->
+  </div>
+  <!-- partial:index.partial.html -->
+  <canvas id="bgCanvas"></canvas>
+  <!-- partial -->
+  <div class="scroll-left">
+    <p>My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is &nbsp &nbsp &nbsp My Name is</p>
+  </div>
+
+</div>
+
+<div>
+
+  <div class="initialmsg">
+    <div id="but" class="weswap-current">
+     <p style="text-align:left;">
+Hey, look at me my name is Corona.
+
+    </p>
+    <p style="text-align:left;">
+    Some people knew that I was coming in the march of 2019 itself and some even simulated how they will handle me when I come and funny story I came after 6 weeks of that simulation called "EVENT201".
+
+   </p>
+   <p style="text-align:left;">
+    Well, I can see that because of me all lot of people have touched heights to be hypocritic especially the world political leaders and health officials example " It is wrong when you protest against lockdown but it is important to protest in favor of Blacklivesmatter #BLM, one more example that the readers might relate to is that it is shown to us that I AM DANGEROUS that is the reason why all of the country's in the world were locked for 4 to 6 months, but wait there's is a catch because during election time when there are thousands of people gathering in the election rally than even the PM of India is proved to be a hypocrite or the dumbest PM of all time.
+
+  </p>
+  <p style="text-align:left;">
+   Well there are two possibilities:<ol> 
+<li>If I exist then why all of you are allowed to gather whenever the government wants you to gather and beat the sit out of you when they don't?</li>
+
+<li>If I don't THAN WHAT THE FUCK IS GOING ON???</li></ol>
+ </p>
+
+
+</div>
+
+</div>
+
+<div class="english hide">
+  <div id="but" class="weswap-current">
+
+  </div>
+
+</div>
+<div class="hindi hide">
+  <div id="but" class="weswap-current">
+
+    <!-------hindi not used-------->
+  </div>
+</div>
+
+
+
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script  src="../basescript.js"></script>
+
+<!------Preloader----------->
+    <script type="text/javascript">
+      var _d = document,
+      _p = _d.querySelector('.preloader');
+
+      console.log(_p)
+
+      setTimeout(function(){
+        _p.classList.add('is-loaded')
+      }, 3000)
+
+
+</script>
+</body>
+</html>
