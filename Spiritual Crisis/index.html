@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  <!--ham -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Covid-19: A Spiritual Crisis</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFT GAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-----------audio---------->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style type="text/css">
+
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      transition: opacity .1s;
+      transition-delay: 3s;
+    }
+    .preloader.is-loaded {
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0);
+      opacity: 0;
+    }
+
+    .pl-line {
+      position: absolute;
+      width: 1px;
+      height: 150%;
+      background: black;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(20deg);
+      transition: opacity 1s ease-out;
+    }
+    .is-loaded .pl-line {
+      opacity: 0;
+    }
+    .pl-line > div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #f00;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      animation: pulse 2s infinite;
+      will-change: transform;
+      animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    .pl-l, .pl-r {
+      position: absolute;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      will-change: transform;
+      background: black;
+    }
+
+    .pl-l {
+      left: -20%;
+      transform: skew(-20deg);
+    }
+    .is-loaded .pl-l {
+      transform: translateX(-100%) skew(-20deg);
+    }
+
+    .pl-r {
+      right: -20%;
+      transform: skew(-20deg);
+    }
+    .is-loaded .pl-r {
+      transform: translateX(100%) skew(-20deg);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+  </style>
+  <link rel="stylesheet" href="../basestyle.css">
+
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div class="preloader" style="z-index:9999999999999999;">
+    <div class="pl-l"></div>
+    <div class="pl-r"></div>
+    <div class="pl-line">
+      <div></div>
+    </div>
+  </div>
+  <!-- /PRELOADER -->
+  <div class="flex-contianer" >
+    <div class="aud">
+      <audio src="../eng.mp3" id="aud" loop="TRUE"></audio>
+      <button id="butto" class="butto">
+        <i class="fa fa-volume-up " aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="eee" style="display: none;" >
+
+      <button class="map-point-sm en eng button" id="en" data-show=".english">
+        <div class="content">
+          <div  class="ed">
+            <p>English</p>
+          </div>
+        </div>
+      </button>
+      <button class="map-point-sm hi button" id="hi" data-show=".hindi">
+        <div class="content">
+          <div>
+            <p  class="hd">Hindi</p>
+          </div>
+        </div>
+      </button>
+
+    </div><!-- end inner basic -->
+  </div>
+  <!-- partial:index.partial.html -->
+  <canvas id="bgCanvas"></canvas>
+  <!-- partial -->
+  <div class="scroll-left">
+    <p>Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis &nbsp &nbsp &nbsp Covid-19: A Spiritual Crisis</p>
+  </div>
+
+</div>
+
+<div>
+
+  <div class="initialmsg">
+    <div id="but" class="weswap-current">
+      <p style="text-align:left;">
+        This complete holistic situation is not a health crisis but a spiritual crisis. This is to break the mental blindness of humans, which has disabled to visualize the truth behind the happenings.
+      </p>
+      <p style="text-align:left;">
+        The first wave of lockdown was the first wave of awakening, the second wave of lockdown will be the second wave of awakening. Each wave of suffering and materialistic loss will bring a new wave of awakening.
+      </p>
+      <p style="text-align:left;">
+        Yes, this whole thing is to awaken us. Those who are being seen as a villain are the destroyers of our blindness and those whom we see as savers are the one who wants to keep us in blindness.
+      </p>
+      <p style="text-align:left;">
+
+      Yes, there should be no returning to the old normal, the old normal which kept us in blindness. But this whole process is very painful and full of sufferings for those who will not be ready to awake from blindness. And the majority are those who are completely blindfolded in darkness.</p>
+
+      <p style="text-align:left;">
+      Every individual will get several chances to awaken, to know the truth about the Covid mRNA/rDNA Hydrogel Quantum Dots Digital Tattoo Vaccine. But those who will take this Vaccination even after knowing the truth will finally suffer. </p>
+
+      <p style="text-align:left;">Yes, this is the depopulation agenda but its depopulation of negativity. The physical body is an illusion that is bound to dilute one or the other day. Those who will not be able to forgo the physical possessions and materialistic desires are bound to suffer in this spiritual detoxification process.
+      </p>
+      <p style="text-align:right; padding-right:  8%;">
+        - Vikash Diwan<br>
+        <a href="https://t.me/TruthUncensored" style="text-decoration: none;color: #ff0">t.me/TruthUncensored</a>
+      </p>
+
+
+    </div>
+
+  </div>
+
+  <div class="english hide">
+    <div id="but" class="weswap-current">
+
+    </div>
+
+  </div>
+  <div class="hindi hide">
+    <div id="but" class="weswap-current">
+
+      <!-------hindi not used-------->
+    </div>
+  </div>
+
+
+
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script  src="../basescript.js"></script>
+
+<!------Preloader----------->
+<script type="text/javascript">
+  var _d = document,
+  _p = _d.querySelector('.preloader');
+
+  console.log(_p)
+
+  setTimeout(function(){
+    _p.classList.add('is-loaded')
+  }, 3000)
+
+
+</script>
+</body>
+</html>
