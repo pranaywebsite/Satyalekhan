@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  <!--ham -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>में पंछी सोने के पिंझरे का...</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFT GAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-----------audio---------->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <style type="text/css">
+* {box-sizing: border-box;}
+
+@font-face {
+    font-family: Montserrat-Thin;
+    src: url(Montserrat-Thin.ttf);
+  }
+.hello{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 40%;
+    color:#FFEB3B;
+}
+.wellcome{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color:#FFEB3B;
+}
+
+body{
+    margin:0;
+    padding: 0;    
+}
+.preload{
+    width: 100%;
+    height: 100%;
+    background:#000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.loader-frame{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-top: 15%;
+    position: relative;
+}
+
+.circle{
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: white 0%;
+  border: 1px solid #f00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.loader1{
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-top: 5px solid   #f00;
+    border-bottom: 5px solid #f00;
+    animation: clockwisespin 5s linear 3;
+}
+@media screen and (max-width: 420px) {
+  
+   
+  .loader-frame{
+    margin-top: 30%;
+
+  }
+  
+.hello{
+  margin-top: 30vh;
+  padding-bottom: 50%;
+  }
+  
+}
+@keyframes clockwisespin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+@keyframes fadeout{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+@keyframes fadein{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+  </style>
+  <link rel="stylesheet" href="../basestyle.css">
+
+</head>
+ <body onload="myFunction()">
+          <div class="preload" id="preload" style="z-index:999999999999999;">
+        <div class="logo">
+        </div>
+        <div class="loader-frame">
+            <div class="loader1" id="loader1">
+            </div>
+            <div class="circle"></div>
+            <h1 class="hello" >Loading...</h1>
+        </div>
+    </div>
+  <!-- END PRELOADER -->
+  <div class="flex-contianer" >
+    <div class="aud">
+      <audio src="../eng.mp3" id="aud" loop="TRUE"></audio>
+      <button id="butto" class="butto">
+        <i class="fa fa-volume-up " aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="eee" style="display: none;" >
+
+      <button class="map-point-sm en eng button" id="en" data-show=".english">
+        <div class="content">
+          <div  class="ed">
+            <p>English</p>
+          </div>
+        </div>
+      </button>
+      <button class="map-point-sm hi button" id="hi" data-show=".hindi">
+        <div class="content">
+          <div>
+            <p  class="hd">Hindi</p>
+          </div>
+        </div>
+      </button>
+
+    </div><!-- end inner basic -->
+  </div>
+  <!-- partial:index.partial.html -->
+  <canvas id="bgCanvas"></canvas>
+  <!-- partial -->
+  <div class="scroll-left">
+    <p>में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp में पंछी सोने के पिंझरे का &nbsp &nbsp &nbsp</p>
+  </div>
+
+</div>
+
+<div>
+
+  <div class="initialmsg">
+    <div id="but" class="weswap-current">
+     <p style="text-align:center;">
+में पंछी सोने के पिंझरे का, यह उपमा लिए फिरता हूं...<br>
+उड़ना तोह चाहता हूं, मगर पिंझरे से टकराकर फिर घिरता हूं। <br>
+
+
+    </p>
+    <p style="text-align:center;">
+    मेरी उड़ाने, मेरी आंखों को कोसती है कि घर का भेदी है तू...<br>
+पिंझरा सोने का ही क्यू ना हो, मगर असल में कैदी है तू।<br>
+
+
+   </p>
+   
+  <p style="text-align:center;">
+   कोई पूछे तो उससे कह देना कि इस सोने के पिंजरे की कीमत मेरी उड़ान थी...<br>
+ये मेरा घर नहीं, मेरा घर यहां से दूर है, जिसमें मेरी जान थी।<br>
+  </p>
+  <p style="text-align:center;">
+    काश कोई आए और खोल दे ये पिंजरे का ताला...<br>
+पिंजरा सोने का देख शक ना करना, नहीं हूं में इतना किस्मत वाला।<br>
+  </p>
+ <p style="text-align:center;">
+    सोने का पिंझरा देख मुझे नसीबदार ना समझना...<br>
+में तोह बेजुबान हूं, मुझे खुद की तरह मोन ना समझना।<br>
+  </p>
+  <p style="text-align:center;">
+  थक गया हूं में, अब हौसलों में उड़ान नहीं है...<br>
+उड़ना तोह चाहता हूं मगर पंखों में अब वो जान नहीं है।<br>
+</p>
+<p style="text-align:right; padding-right:  8%;">
+        - भव्य कुमार जैन<br>
+      </p>
+<!-- <p style="text-align:right; padding-right:  8%;">
+  - Pranay Patel<br>
+ </p>
+-->
+
+</div>
+
+</div>
+
+<div class="english hide">
+  <div id="but" class="weswap-current">
+
+  </div>
+
+</div>
+<div class="hindi hide">
+  <div id="but" class="weswap-current">
+
+    <!-------hindi not used-------->
+  </div>
+</div>
+
+
+
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script  src="../basescript.js"></script>
+
+<!-----------preloader script----->
+<script type="text/javascript">
+ var myVar;
+
+function myFunction(){
+    myVar = setTimeout(hiding, 2000);
+    myVar = setTimeout(showPage,3000);
+}
+
+function showPage(){
+    document.getElementById("preload").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+}
+
+function hiding(){
+    document.getElementById("preload").style.animation = "fadeout 1s ease";
+    document.getElementById("myDiv").style.animation = "fadein 1s ease";
+}
+
+
+</script>
+</body>
+</html>
