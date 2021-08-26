@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  <!--ham -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>पहली नजर की मोहब्बत</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFT GAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-----------audio---------->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+
+  <style type="text/css">
+    body {overflow: hidden;}
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      background-color:  #000;
+      justify-content: center;
+      align-items: center;
+    } 
+
+    .loader {
+      width: 12rem;
+      height:12rem;
+    }
+
+    .load {
+      width: 33.33333333333333%;
+      height: 33.33333333333333%;
+      float: left;
+      background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+      animation: move .7s infinite ease-in-out;
+      -webkit-animation: move .7s infinite ease-in-out;
+    }
+
+    .load:nth-of-type(7) {
+      -webkit-animation-delay: .3s;
+      animation-delay: .3s;
+    }
+
+    .load:nth-of-type(4), .load:nth-of-type(8) {
+      -webkit-animation-delay: .4s;
+      animation-delay: .4s;
+    }
+    .load:first-of-type, .load:nth-of-type(5), .load:nth-of-type(9) {
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s;
+    }
+    .load:nth-of-type(2), .load:nth-of-type(6) {
+      -webkit-animation-delay: .6s;
+      animation-delay: .6s;
+    }
+    .load:nth-of-type(3) {
+      -webkit-animation-delay: .7s;
+      animation-delay: .7s;
+    }
+    @keyframes move {
+      0%,50% 100%{
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+        } 70% {
+          -webkit-transform: scale3D(0, 0, 1);
+          transform: scale3D(0, 0, 1); 
+        }
+      }
+
+
+
+    </style>
+    <!--------------preloader end--------->
+    <link rel="stylesheet" href="../basestyle.css">
+
+  </head>
+  <body>
+    <!-- PRELOADER -->
+    <div id="preloader" style="z-index:999999999999999999999999999999999999">
+      <div class="loader">
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+      </div>
+    </div>
+    <!-- /PRELOADER -->
+    <div class="flex-contianer">
+      <div class="aud">
+        <audio src="../eng.mp3" id="aud" loop="TRUE"></audio>
+        <button id="butto" class="butto">
+          <i class="fa fa-volume-up " aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="eee" style="display: none;" >
+
+        <button class="map-point-sm en eng button" id="en" data-show=".english">
+          <div class="content">
+            <div  class="ed">
+              <p>English</p>
+            </div>
+          </div>
+        </button>
+        <button class="map-point-sm hi button" id="hi" data-show=".hindi">
+          <div class="content">
+            <div>
+              <p  class="hd">हिंदी</p>
+            </div>
+          </div>
+        </button>
+
+      </div><!-- end inner basic -->
+    </div>
+    <!-- partial:index.partial.html -->
+    <canvas id="bgCanvas"></canvas>
+    <!-- partial -->
+    <div class="scroll-left">
+      <p>पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp पहली नजर की मोहब्बत &nbsp &nbsp &nbsp </p>
+    </div>
+
+  </div>
+
+  <div>
+
+    <div class="initialmsg">
+      <div id="but" class="weswap-current">
+        <p style="text-align:center;">
+
+          हां, में वही जिसे पहली नजर की मोहब्बत पर ऐतबार न था...<br>
+          मगर उसका वो चेहरा,जिसके दीदार को में तैयार न था ।<br>
+
+        </p>
+        <p style="text-align:center;">
+          वो चेहरा, आज भी दिल की एक तस्वीर में हैं...<br>
+उसे देखते ही दिल ने सोचा, क्या यें मेरी तक़दीर में है?<br>
+
+        </p>
+        <p style="text-align:center;">
+          उसे देखने के बाद, मेरे एहसास, मुझे एहसास नहीं देते...<br>
+खोया तोह पहले भी था, मगर ये खोने नहीं देते ।<br>
+
+
+        </p>
+        <p style="text-align:center;">
+          सोचता हूं, ताउम्र ये हसीन चेहरा में निहारता रहू...<br>
+हमारी जंग हों, ताकि में इससे मिल सकु और उससे हारता रहूं ।<br>
+
+
+        </p>
+        <p style="text-align:center;">
+          उसका यु आंखों को उठाना, और फिर झुका देना, मुझे घायल कर गया...<br>
+ये तोह एक नमूना था, मुझे तोह वो अपनी हर अदा का कायल कर गया ।<br>
+
+        </p>
+        <p style="text-align:center;">
+        जिसे भी भरोसा नहीं, पहली नजर की मोहब्बत पर वो इंतेज़ार करे, किसी के मिलने का...<br>
+जैसे हर फूल कर करता है, सूरज को देखकर खुद को खिलने का ।<br>
+</p>
+<p style="text-align:right; padding-right:  8%;">
+  - भव्य कुमार जैन<br>
+</p>
+      </div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<!------Preloader----------->
+<script type="text/javascript">
+  var loader = document.getElementById("preloader");
+
+  window.onload = setTimeout(function () {
+
+    document.body.style.overflow = "auto";
+
+    loader.style.display = "none";
+
+  },2000 );
+
+
+
+
+</script>
+<script  src="../basescript.js"></script>
+
+</body>
+</html>
